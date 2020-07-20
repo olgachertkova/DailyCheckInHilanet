@@ -16,7 +16,12 @@ public class Main {
         System.out.println("Automatic HILANET check-in for WIX employers.\n" +
                 "Version 1.02.\n" +
                 "(C) Olga Chertkov, olga@chertkov.info, 2020\n" +
-                "");
+                "https://github.com/olgachertkova/DailyCheckInHilanet\n");
+        if(args.length!=2){
+            System.out.println("ERROR: Required parameters not found.\n" +
+                    "Usage: java -jar DailyCheckInHilanet.jar [Employee_number] [Password]\n");
+            System.exit(127);
+        }
         ChromeOptions options = new ChromeOptions();
         options.addArguments("headless");
         options.addArguments("window-size=1800x900");
