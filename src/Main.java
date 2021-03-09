@@ -18,7 +18,7 @@ public class Main {
                 "(C) Olga Chertkov, olga@chertkov.info, 2020\n" +
                 "https://github.com/olgachertkova/DailyCheckInHilanet\n");
         if(args.length!=2){
-            System.out.println("ERROR: Required parameters not found.\n" +
+            System.out.println("ERROR: Required parameters is not found.\n" +
                     "Usage: java -jar DailyCheckInHilanet.jar [Employee_number] [Password]\n");
             System.exit(127);
         }
@@ -64,7 +64,7 @@ public class Main {
             submitButton.click();
             System.out.println("--- Click submit ---");
         } catch (NoSuchElementException e) {
-            System.out.println(e.getMessage());
+            System.out.println("--- There is no alert ---");
 
         }
 
@@ -72,7 +72,7 @@ public class Main {
             driver.findElement(By.id("btnContinue")).click();
             System.out.println("--- Click Continue button ---");
         } catch (NoSuchElementException e) {
-            System.out.println(e.getMessage());
+            System.out.println("--- There is no alert ---");
         }
 
 
